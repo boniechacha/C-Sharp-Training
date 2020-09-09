@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{C82CFB1C-F78E-4960-9DCB-B473109B5025}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SoftNetTraining/Lecture4/LearningLINQ.cs">
+    <Files>
+      <File FileName="SoftNetTraining/Lecture4/LearningArrayList.cs" Line="97" Column="1" />
+      <File FileName="SoftNetTraining/Lecture4/LearningLINQ.cs" Line="21" Column="57" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SoftNetTraining" expanded="True">
+            <Node name="SoftNetTraining" expanded="True">
+              <Node name="Lecture4" expanded="True">
+                <Node name="LearningLINQ.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.SoftNetTraining PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
