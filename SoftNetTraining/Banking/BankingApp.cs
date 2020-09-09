@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using SoftNetTraining.Banking;
 using SoftNetTraining.Payroll;
 
@@ -69,14 +70,15 @@ namespace SoftNetTraining.Lecture4
 
         private static int CaptureOption()
         {
-            Console.WriteLine("Select Your Option:");
-            Console.WriteLine("1. Create current account");
-            Console.WriteLine("2. List all account");
-            Console.WriteLine("3. Deposit");
-            Console.WriteLine("4. WithDraw");
-            Console.WriteLine("5. Find Account");
+            StringBuilder menu = new StringBuilder();
+            menu.AppendLine("Select Your Option:");
+            menu.AppendLine("1. Create current account");
+            menu.AppendLine("2. List all account");
+            menu.AppendLine("3. Deposit");
+            menu.AppendLine("4. WithDraw");
+            menu.AppendLine("5. Find Account");
 
-            return ConsoleUtil.CaptureInputInt("");
+            return ConsoleUtil.CaptureInputInt(menu.ToString());
         }
     }
 }
