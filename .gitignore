@@ -46,7 +46,7 @@ x64/
 .vs
 .idea
 .vs/
-.dea/
+.idea/
 # Visual C++ cache files
 ipch/
 *.aps
