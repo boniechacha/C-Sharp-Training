@@ -14,18 +14,18 @@ namespace SoftNetTraining.Banking
 
         public override double WithDraw(double amount)
         {
-            if (balance > MinBalance)
+            if (Balance > MinBalance)
             {
-                balance = balance - amount;
-                return balance;
+                Balance = Balance - amount;
+                return Balance;
             }
             else throw new ArgumentException();
         }
 
         public override double Deposit(double amount)
         {
-            balance = balance + amount;
-            return balance;
+            Balance = Balance + amount;
+            return Balance;
         }
     }
 }

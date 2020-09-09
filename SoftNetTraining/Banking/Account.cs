@@ -7,14 +7,14 @@ namespace SoftNetTraining.Banking
         public string Name { get; set; }
         public string Number { get; set; }
 
-        protected double balance;
+        public double Balance { protected set; get; }
 
 
         protected Account(string name, string number)
         {
             this.Name = name;
             this.Number = number;
-            this.balance = 0.0;
+            this.Balance = 0.0;
         }
 
         public string this[string key]
@@ -37,7 +37,7 @@ namespace SoftNetTraining.Banking
                 }
                 else if (key == "Number")
                 {
-                     Number = value;
+                    Number = value;
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace SoftNetTraining.Banking
 
         public string getInfo()
         {
-            return $"{Number,-10} {Name,-10} | {balance,10}";
+            return $"{Number,-10} {Name,-10} | {Balance,10}";
         }
 
 
@@ -58,8 +58,8 @@ namespace SoftNetTraining.Banking
 
         public int CompareTo(Account other)
         {
-            if (this.balance > other.balance) return +1;
-            else if (this.balance < other.balance) return -1;
+            if (this.Balance > other.Balance) return +1;
+            else if (this.Balance < other.Balance) return -1;
             else return 0;
         }
     }

@@ -13,14 +13,14 @@ namespace SoftNetTraining.Banking
 
         public override double WithDraw(double amount)
         {
-            this.balance = this.balance - amount;
-            return this.balance;
+            this.Balance = this.Balance - amount;
+            return this.Balance;
         }
 
         public override double Deposit(double amount)
         {
-            this.balance = this.balance + amount;
-            return this.balance;
+            this.Balance = this.Balance + amount;
+            return this.Balance;
         }
     }
 }
