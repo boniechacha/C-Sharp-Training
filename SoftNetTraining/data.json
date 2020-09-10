@@ -1,0 +1,133 @@
+{
+  "code": 200,
+  "meta": {
+    "pagination": {
+      "total": 24,
+      "pages": 2,
+      "page": 1,
+      "limit": 20
+    }
+  },
+  "data": [
+    {
+      "id": 1,
+      "name": "Books",
+      "description": "Sponte aut carpo aufero labore tero cernuus soluta tenetur bestia.",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Outdoors, Garden \u0026 Books",
+      "description": "Aveho voluptate vado tenus et aqua.",
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Automotive \u0026 Shoes",
+      "description": "Vilis tondeo cursim civis conqueror aetas id deputo desipio dicta.",
+      "status": true
+    },
+    {
+      "id": 4,
+      "name": "Computers \u0026 Outdoors",
+      "description": "Derelinquo doloribus turbo colo vox.",
+      "status": true
+    },
+    {
+      "id": 5,
+      "name": "Music \u0026 Automotive",
+      "description": "Cupressus viriliter undique eligendi cuius cetera voco iste demens.",
+      "status": true
+    },
+    {
+      "id": 6,
+      "name": "Kids \u0026 Shoes",
+      "description": "Vaco adhaero libero solum cibo.",
+      "status": true
+    },
+    {
+      "id": 7,
+      "name": "Beauty, Clothing \u0026 Baby",
+      "description": "Cernuus aliquid turpe conitor correptius abduco.",
+      "status": true
+    },
+    {
+      "id": 8,
+      "name": "Beauty \u0026 Books",
+      "description": "Dolor vesco conscendo enim rerum sollicito.",
+      "status": true
+    },
+    {
+      "id": 9,
+      "name": "Music",
+      "description": "Torqueo et absorbeo succurro curatio tergo brevis et stipes adnuo.",
+      "status": true
+    },
+    {
+      "id": 10,
+      "name": "Jewelry",
+      "description": "Ceno delectus cum deripio culpa sursum corroboro audio.",
+      "status": true
+    },
+    {
+      "id": 11,
+      "name": "Computers, Toys \u0026 Garden",
+      "description": "Provident iusto celer talio audacia.",
+      "status": true
+    },
+    {
+      "id": 12,
+      "name": "Health \u0026 Garden",
+      "description": "Cinis tam alter cotidie cicuta valens est.",
+      "status": true
+    },
+    {
+      "id": 13,
+      "name": "Home, Movies \u0026 Electronics",
+      "description": "Aequus vulgus voluptas coruscus causa cattus crur taedium modi spargo tamdiu.",
+      "status": true
+    },
+    {
+      "id": 14,
+      "name": "Tools \u0026 Music",
+      "description": "Despirmatio tripudio incidunt defaeco angelus tamdiu tego vulgo.",
+      "status": true
+    },
+    {
+      "id": 15,
+      "name": "Computers, Baby \u0026 Garden",
+      "description": "Denuncio utpote nemo auditor tremo.",
+      "status": true
+    },
+    {
+      "id": 16,
+      "name": "Electronics",
+      "description": "Nihil pectus amplus denuo truculenter alius placeat uberrime.",
+      "status": true
+    },
+    {
+      "id": 17,
+      "name": "Clothing, Movies \u0026 Automotive",
+      "description": "Viduata vivo allatus centum accusamus subvenio.",
+      "status": true
+    },
+    {
+      "id": 18,
+      "name": "Clothing \u0026 Garden",
+      "description": "Currus tyrannus sunt voluptatem taceo venia angulus demens.",
+      "status": true
+    },
+    {
+      "id": 19,
+      "name": "Health \u0026 Books",
+      "description": "Tardus tertius cimentarius iure conforto animi turba degusto.",
+      "status": true
+    },
+    {
+      "id": 20,
+      "name": "Health \u0026 Toys",
+      "description": "Adaugeo tondeo super socius exercitationem admiratio acceptus compono ademptio.",
+      "status": true
+    }
+  ]
+}

@@ -62,5 +62,6 @@ namespace SoftNetTraining.Banking
             else if (this.Balance < other.Balance) return -1;
             else return 0;
         }
+        
     }
 }

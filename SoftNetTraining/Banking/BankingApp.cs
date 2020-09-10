@@ -11,6 +11,7 @@ namespace SoftNetTraining.Lecture4
 
         public static void Run()
         {
+            Console.Clear();
             int option = CaptureOption();
             switch (option)
             {

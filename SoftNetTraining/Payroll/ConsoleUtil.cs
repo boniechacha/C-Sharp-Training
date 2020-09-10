@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace SoftNetTraining.Payroll
 {
@@ -17,6 +18,17 @@ namespace SoftNetTraining.Payroll
             foreach (object c in content)
             {
                 Console.Write("{0} ", c);
+            }
+
+            Console.WriteLine();
+            
+        }
+        
+        public static void Display<T>(IEnumerable<T> content,string format, Func<T, object[]> formatInput)
+        {
+            foreach (T t in content)
+            {
+                Console.Write(format, formatInput(t));
             }
 
             Console.WriteLine();
