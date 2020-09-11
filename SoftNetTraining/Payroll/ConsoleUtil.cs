@@ -13,37 +13,26 @@ namespace SoftNetTraining.Payroll
             return input;
         }
 
-        public static void Display(IEnumerable content)
-        {
-            foreach (object c in content)
-            {
-                Console.Write("{0} ", c);
-            }
-
-            Console.WriteLine();
-            
-        }
-        
-        public static void Display<T>(IEnumerable<T> content,string format, Func<T, object[]> formatInput)
-        {
-            foreach (T t in content)
-            {
-                Console.Write(format, formatInput(t));
-            }
-
-            Console.WriteLine();
-        }
-
-        public static int CaptureInputInt(string message)
+        public static int CaptureInputInt(string message, int min, int max)
         {
             try
             {
-                return Convert.ToInt32(CaptureInputString(message));
+                string input = CaptureInputString(message);
+                int intInput = Convert.ToInt32(input);
+                if (intInput > max || intInput < min)
+                {
+                    Console.WriteLine("You have entered number out of range");
+                    return CaptureInputInt(message, min, max);
+                }
+                else
+                {
+                    return intInput;
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine("****{0}****", e.Message);
-                return CaptureInputInt(message);
+                Console.WriteLine("**** You have entered incorrect number ****");
+                return CaptureInputInt(message, min, max);
             }
         }
 
@@ -55,9 +44,29 @@ namespace SoftNetTraining.Payroll
             }
             catch (Exception e)
             {
-                Console.WriteLine("****{0}****", e.Message);
-                return CaptureInputInt(message);
+                Console.WriteLine("**** You have entered incorrect number ****");
+                return CaptureInputDouble(message);
             }
+        }
+
+        public static void Display(IEnumerable content)
+        {
+            foreach (object c in content)
+            {
+                Console.Write("{0} ", c);
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void Display<T>(IEnumerable<T> content, string format, Func<T, object[]> formatInput)
+        {
+            foreach (T t in content)
+            {
+                Console.Write(format, formatInput(t));
+            }
+
+            Console.WriteLine();
         }
     }
 }

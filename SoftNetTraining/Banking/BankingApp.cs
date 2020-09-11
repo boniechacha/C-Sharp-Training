@@ -79,7 +79,7 @@ namespace SoftNetTraining.Lecture4
             menu.AppendLine("4. WithDraw");
             menu.AppendLine("5. Find Account");
 
-            return ConsoleUtil.CaptureInputInt(menu.ToString());
+            return ConsoleUtil.CaptureInputInt(menu.ToString(),1,5);
         }
     }
 }
