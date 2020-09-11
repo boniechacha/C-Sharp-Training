@@ -2,6 +2,7 @@
 using SoftNetTraining.Lecture5;
 using System;
 using System.Configuration;
+using System.IO;
 using MySql.Data.MySqlClient;
 using SoftNetTraining.Database;
 using SoftNetTraining.Lecture6;
@@ -12,7 +13,7 @@ namespace SoftNetTraining
     {
         static void Main(string[] args)
         {
-          LearningMSSQL.Run();
+            LearningMSSQL.Run();
         }
     }
 }

@@ -13,22 +13,28 @@ namespace SoftNetTraining.Lecture6
         {
             Console.WriteLine("1. List all student");
             Console.WriteLine("2. Register new student");
-            Console.WriteLine("3. Quit");
+            Console.WriteLine("3. Update existing student");
+            Console.WriteLine("4. Deleting existing student");
+            Console.WriteLine("5. Quit");
 
-            Console.WriteLine("Enter your choice");
-            string choice = Console.ReadLine();
+            int choice = ConsoleUtil.CaptureInputInt("Enter your choice", 1, 5);
 
             switch (choice)
             {
-                case "1":
+                case 1:
                     ListAllStudents();
                     break;
                 
-                case "2":
+                case 2:
                     RegisterNewStudent();
                     break;
-                
-                case "3":
+                case 3:
+                    UpdateExistingStudent();
+                    break;
+                case 4:
+                    RemoveStudent();
+                    break;
+                case 5:
                     Console.WriteLine("Thank you!");
                     return;
             }
