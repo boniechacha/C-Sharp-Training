@@ -1,43 +1,36 @@
 using System;
 using System.Data.SqlClient;
 using SoftNetTraining.Payroll;
+using System.Configuration;
 
 namespace SoftNetTraining.Lecture6
 {
     public class LearningMSSQL
     {
-        public static string CONN_STRING = "Data Source=172.20.10.2;Initial Catalog=school;User ID=sa;Password=saby";
-
-        public static void Run()
+        public static string CONN_STRING = ConfigurationManager.ConnectionStrings["MSSQL"].ConnectionString;
+        
+        public static void  Run()
         {
             Console.WriteLine("1. List all student");
             Console.WriteLine("2. Register new student");
-            Console.WriteLine("3. Update existing student");
-            Console.WriteLine("4. Remove existing student");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("3. Quit");
 
-            int choice = ConsoleUtil.CaptureInputInt("Select your option", 1, 5);
+            Console.WriteLine("Enter your choice");
+            string choice = Console.ReadLine();
 
             switch (choice)
             {
-                case 1:
+                case "1":
                     ListAllStudents();
                     break;
-                case 2:
+                
+                case "2":
                     RegisterNewStudent();
                     break;
-                case 3:
-                    UpdateExistingStudent();
-                    break;
-                case 4:
-                    RemoveStudent();
-                    break;
-                case 5:
+                
+                case "3":
                     Console.WriteLine("Thank you!");
                     return;
-                default:
-                    Console.WriteLine("We are not suppose to reach here");
-                    break;
             }
             
             Run();
@@ -47,8 +40,7 @@ namespace SoftNetTraining.Lecture6
         {
             Reading();
         }
-
-
+        
         private static void RegisterNewStudent()
         {
             string name = ConsoleUtil.CaptureInputString("What is the student name?");
@@ -57,7 +49,7 @@ namespace SoftNetTraining.Lecture6
 
             Inserting(name, course, campus);
         }
-
+        
         private static void RemoveStudent()
         {
             int stId = ConsoleUtil.CaptureInputInt("Enter student id to be removed", 0, Int32.MaxValue);
