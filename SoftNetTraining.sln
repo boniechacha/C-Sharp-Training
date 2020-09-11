@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftNetTraining", "SoftNetTraining\SoftNetTraining.csproj", "{C82CFB1C-F78E-4960-9DCB-B473109B5025}"
 EndProject
 Global
