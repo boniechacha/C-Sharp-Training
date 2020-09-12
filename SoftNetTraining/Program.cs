@@ -4,8 +4,10 @@ using System;
 using System.Configuration;
 using System.IO;
 using MySql.Data.MySqlClient;
+using SoftNetTraining.Banking;
 using SoftNetTraining.Database;
 using SoftNetTraining.Lecture6;
+using SoftNetTraining.Lecture7;
 
 namespace SoftNetTraining
 {
@@ -13,7 +15,7 @@ namespace SoftNetTraining
     {
         static void Main(string[] args)
         {
-            LearningMSSQL.Run();
+            LeaningDelegates.Run();
         }
     }
 }

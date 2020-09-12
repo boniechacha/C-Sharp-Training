@@ -48,7 +48,7 @@ namespace SoftNetTraining.Lecture4
             Current a1 = new Current(
                 "Chacha",
                 "123"
-           );
+            );
 
             Current a2 = new Current("Michael", "876");
             Saving a3 = new Saving("Ferouz", "789", 1000);
@@ -60,58 +60,25 @@ namespace SoftNetTraining.Lecture4
             accounts.Add(a3);
 
 
-           Account myAccount =  accounts.Find(
-
-               c =>
-               {
-                   return c.Number == "123";
-               }
-
-           );
+            Account myAccount = accounts.Find(
+                c => { return c.Number == "123"; }
+            );
 
 
-
-
-            List<int> x = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
+            List<int> x = new List<int>() {1, 2, 3, 4, 5, 6, 7};
             List<int> x1 = x.FindAll(
-                i =>
-               {
-                   return i % 2 != 0;
-               });
+                i => { return i % 2 != 0; });
 
             x1.FindAll(
-                 i =>
-                 {
-                     return i > 3;
-                 }
-                );
+                i => { return i > 3; }
+            );
 
 
-            List<int> x2 = new List<int>() { 2, 4, 6 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            List<int> x2 = new List<int>() {2, 4, 6};
 
 
             Account ferouzAccount = accounts.Find(
-                account =>
-                {
-                    return account.Name == "Ferouz";
-                }
+                account => { return account.Name == "Ferouz"; }
             );
 
 
@@ -170,6 +137,31 @@ namespace SoftNetTraining.Lecture4
             accounts.Add(a3);
 
             return accounts;
+        }
+
+
+        private static void Finding()
+        {
+            // Predicate<Account> predicate =
+            //     account =>
+            //     {
+            //         return account.Number == "123";
+            //     };
+            //
+            // List<Account> accounts = CreateAccountList();
+            // Account account = accounts.Find(predicate);
+            
+            
+           
+            List<Account> accounts = CreateAccountList();
+            Account account = accounts.Find(
+                account =>
+                {
+                    return account.Number == "123";
+                }
+           );
+            
+            
         }
     }
 }

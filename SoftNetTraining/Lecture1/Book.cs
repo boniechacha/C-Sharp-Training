@@ -2,21 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace SoftNetTraining
-{ 
-   public class Book
+{
+    [Serializable]
+    [DataContract]
+    public class Book
     {
+        [DataMember] 
         public int Pages { get; set; }
+
+        [DataMember] 
         public string Author { get; set; }
+
+        [DataMember] 
         public string Title { get; set; }
 
+        [XmlIgnore] 
         public DateTime Date { get; set; }
-
-        // static Book()
-        // {
-        //     Console.WriteLine("Before the first instance of the book is created");
-        // }
 
         public Book()
         {
