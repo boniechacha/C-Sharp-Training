@@ -15,10 +15,10 @@ namespace SoftNetTraining.Encryption
             // This will convert our input string into bytes and back
             // ASCIIEncoding converter = new ASCIIEncoding();
 
-            // Convert the plain text into a byte array
+            // Convert the plain text into a byte array or encoding
             byte[] plainBytes = Encoding.ASCII.GetBytes(plainText);
 
-            dumpBytes("Plain bytes: ", plainBytes);
+            DumpBytes("Plain bytes: ", plainBytes);
 
             byte[] encryptedBytes;
             byte[] decryptedBytes;
@@ -41,9 +41,10 @@ namespace SoftNetTraining.Encryption
             // false
             encryptedBytes = rsaEncrypt.Encrypt(plainBytes, fOAEP:false);
 
-            dumpBytes("Encrypted bytes: ", encryptedBytes);
+            DumpBytes("Encrypted bytes: ", encryptedBytes);
 
             // Now do the decode - use the private key for this
+          
             // We have sent someone our public key and they 
             // have used this to encrypt data that they are sending to us
 
@@ -54,14 +55,16 @@ namespace SoftNetTraining.Encryption
             rsaDecrypt.FromXmlString(privateKey);
  
             decryptedBytes = rsaDecrypt.Decrypt(encryptedBytes, fOAEP: false);
+
+            //decoding
             string decryptedText = Encoding.ASCII.GetString(decryptedBytes);
             
-            dumpBytes("Decrypted bytes: ", decryptedBytes);
+            DumpBytes("Decrypted bytes: ", decryptedBytes);
             Console.WriteLine("Decrypted string: {0}",decryptedText );
 
         }
         
-        static void dumpBytes(string title, byte[] bytes)
+        static void DumpBytes(string title, byte[] bytes)
         {
             Console.Write(title);
             foreach (byte b in bytes)

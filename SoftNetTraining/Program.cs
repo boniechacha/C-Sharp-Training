@@ -11,7 +11,7 @@ namespace SoftNetTraining
     {
         public static void Main(string[] args)
         {
-            LearningHashing.Run();
+            LearningRSA.Run();
         }
     }
 }

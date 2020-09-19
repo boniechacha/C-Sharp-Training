@@ -24,7 +24,7 @@ namespace SoftNetTraining.Encryption
             Console.WriteLine("Message: {0}", messageToSign);
 
             byte[] messageToSignBytes = Encoding.ASCII.GetBytes(messageToSign);
-            dumpBytes("Message to sign in bytes: ", messageToSignBytes);
+            DumpBytes("Message to sign in bytes: ", messageToSignBytes);
 
             // need to calculate a hash for this message - this will go into the 
             // signature and be used to verify the message
@@ -32,11 +32,11 @@ namespace SoftNetTraining.Encryption
             HashAlgorithm hasher = new SHA1Managed();
             // Use the hasher to hash the message
                 byte[] hash = hasher.ComputeHash(messageToSignBytes);
-                dumpBytes("Hash for message: ", hash);
+                DumpBytes("Hash for message: ", hash);
 
             // Now sign the hash to create a signature
             byte[] signature = encryptProvider.SignHash(hash,CryptoConfig.MapNameToOID("SHA1"));
-            dumpBytes("Signature: ", messageToSignBytes);
+            DumpBytes("Signature: ", messageToSignBytes);
 
             // We can send the signature along with the message to authenticate it
             // Create a decryptor that uses the public key 
@@ -52,10 +52,9 @@ namespace SoftNetTraining.Encryption
             bool invalidSignature = decryptProvider.VerifyHash(hash, CryptoConfig.MapNameToOID("SHA1"), signature);
             Console.WriteLine("Incorrect signature validated OK: {0}", invalidSignature);
 
-            Console.ReadKey();
         }
         
-        public static void dumpBytes(string title, byte[] bytes)
+        public static void DumpBytes(string title, byte[] bytes)
         {
             Console.Write(title);
             foreach (byte b in bytes)

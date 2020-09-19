@@ -6,7 +6,7 @@ namespace SoftNetTraining.Encryption
 {
     public class LearningHashing
     {
-        static byte[] calculateHash(string source)
+        static byte[] CalculateHash(string source)
         {
 
             byte[] sourceBytes = Encoding.ASCII.GetBytes(source);
@@ -18,19 +18,19 @@ namespace SoftNetTraining.Encryption
             return hash;
         }
 
-        static void showHash(string source)
+        static void ShowHash(string source)
         {
             
-            byte[] hash = calculateHash(source);
+            byte[] hash = CalculateHash(source);
             DumpBytes($"Hash for {source} is: ",hash);
             
         }
 
         public static void Run()
         {
-            showHash("Hello world");
-            showHash("world Hello");
-            showHash("Hemmm world");
+            ShowHash("Hello world");
+            ShowHash("world Hello");
+            ShowHash("Hemmm world");
 
             Console.ReadKey();
         }
