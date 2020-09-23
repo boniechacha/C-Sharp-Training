@@ -17,10 +17,10 @@ namespace SoftNetTraining.Lecture1
 {
     public class Basics
     {
-        
-        
-        
-        
+
+
+
+
 
 
         public static void strings()
@@ -33,6 +33,7 @@ namespace SoftNetTraining.Lecture1
             StringBuilder s = new StringBuilder();
             s.Append("Hi There!");
             s.Append("Everyone!");
+            s.Apped("From David");
 
 
             StringWriter writer = new StringWriter();
@@ -45,7 +46,7 @@ namespace SoftNetTraining.Lecture1
             string contents = "This is the content from the file";
             StreamReader reader = new StreamReader(contents);
             reader.ReadLine();
-            
+
             // int x = 12;
             // double y = 34.56;
             // string s = $"{x,10} {y,10}";
@@ -454,5 +455,5 @@ namespace SoftNetTraining.Lecture1
             return $"{Data}";
         }
     }
-    
+
 }
